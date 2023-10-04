@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Regasco</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Top -->
+      <div class="top-content">
+        <h1>Republic Gas Corporation <span> [Regasco] </span></h1>
+      </div>
+      <!-- Middle -->
+      <div class="middle-content">
+        <p>Select Office</p>
+      </div>
+
+      <!-- Bottom -->
+      <div class="bottom-content">
+        <div>
+          <button id="main">Main-Branch</button>
+        </div>
+        <div>
+          <button id="sub">Sub-Branch</button>
+        </div>
+
+        <div class="logo">
+          <img src="./img/regasco-logo.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function handleButtonClick(event) {
+        if (event.target.id === "main") {
+          window.location.href = "./components/mainBranch.html";
+        } else if (event.target.id === "sub") {
+          window.location.href = "./components/subBranch.html";
+        }
+      }
+
+      document
+        .getElementById("main")
+        .addEventListener("click", handleButtonClick);
+      document
+        .getElementById("sub")
+        .addEventListener("click", handleButtonClick);
+    </script>
+  </body>
+</html>
