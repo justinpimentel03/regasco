@@ -9,7 +9,9 @@ const ListSales = () => {
 
   const fetchSales = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/sales");
+      const response = await axios.get(
+        "https://regasco.onrender.com/api/sales"
+      );
       setSales(response.data);
       console.log(response.data);
     } catch (error) {

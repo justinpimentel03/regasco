@@ -15,10 +15,11 @@ const Sub = () => {
 
   const fetchSales = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/sales");
+      const response = await axios.get(
+        "https://regasco.onrender.com/api/sales"
+      );
       setSales(response.data);
       console.log(response.data);
-
     } catch (error) {
       console.log("Error", error);
     }
@@ -26,7 +27,9 @@ const Sub = () => {
 
   const handleReport = async (id) => {
     try {
-      const response = await axios.post(`http://localhost:8080/api/sale/${id}`);
+      const response = await axios.post(
+        `https://regasco.onrender.com/api/sale/${id}`
+      );
       setReport(response.data);
     } catch (error) {
       console.log("Error", error);
@@ -36,7 +39,7 @@ const Sub = () => {
   const handleSendReport = async (id, formData) => {
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/decrement/${id}`,
+        `https://regasco.onrender.com/api/decrement/${id}`,
         {
           decrementTotalAvailable: formData.totalAvailable,
           decrementKilos: formData.kilos,

@@ -9,11 +9,10 @@ const TableSale = ({ sales, fetchSales, handleReport }) => {
   const handleDeleteSale = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:8080/api/delete/${id}`
+        `https://regasco.onrender.com/api/delete/${id}`
       );
       fetchSales();
       toast.success(response.data.message);
-
     } catch (error) {
       console.log("Error", error);
     }

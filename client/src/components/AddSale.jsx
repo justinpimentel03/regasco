@@ -16,7 +16,7 @@ const AddSale = ({ fetchSales }) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/add",
+        "https://regasco.onrender.com/api/add",
         formState
       );
       setError("");
