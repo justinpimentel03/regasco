@@ -11,7 +11,7 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8080/api/login", {
+      await axios.post("https://regasco.onrender.com/api/login", {
         role,
         username,
         password,
