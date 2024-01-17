@@ -1,5 +1,5 @@
 const User = require("../models/user.model");
-
+// Register User
 const register = async (req, res) => {
   try {
     const { role, username, password } = req.body;
@@ -18,6 +18,7 @@ const register = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+// Login User
 const login = async (req, res) => {
   try {
     const { role, username, password } = req.body;
